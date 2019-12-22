@@ -1,0 +1,6 @@
+use_frameworks!
+target 'OptionMenu_Tests' do
+  pod 'OptionMenu', :path => '../'
+  
+  
+end
