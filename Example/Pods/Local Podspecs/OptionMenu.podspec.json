@@ -1,0 +1,31 @@
+{
+  "name": "OptionMenu",
+  "version": "1.1.0",
+  "summary": "An option menu contains more than a style to view in iOS.",
+  "description": "It integrates with material design style and other styles to be easily configured to be viewed as suites your App.",
+  "homepage": "https://github.com/Amr/OptionMenu",
+  "authors": {
+    "Amr": "amrelsayed@smartech.online"
+  },
+  "platforms": {
+    "ios": "10.0"
+  },
+  "source": {
+    "path": "."
+  },
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "source_files": "OptionMenu/Classes/**/*",
+  "dependencies": {
+    "MaterialComponents/BottomSheet": [
+      "~> 85.0.0"
+    ],
+    "Localize-Swift": [
+      "~> 2.0.0"
+    ]
+  },
+  "swift_versions": "5.1",
+  "swift_version": "5.1"
+}
