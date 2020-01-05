@@ -37,7 +37,6 @@
 		3EA6DAE3380C47F289741E4CF45955A4 /* UIApplication+AppExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 298EA4E2C7DC7E848EC705B40ACDDAA2 /* UIApplication+AppExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		44F9641BA0057CACFF659434EE80D3B6 /* OptionsMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595DAC20FE67C9EFFA83357C0B9F96AD /* OptionsMenuItem.swift */; };
 		4B1A8654FF7714EB259BC46BFC0280C1 /* MDCShadowLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 01D1A15F767E17E67B2FA4674210E92A /* MDCShadowLayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4C85D3A1C0018DA3907320496A62CEAB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB7DDAD9F8FFDEB7F523702673FC95F /* ViewController.swift */; };
 		4CC0E75F1CF4A42F4F1E0DDFDE84FDE0 /* OptionsMenuDisplayBehaviour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D0FC6D1C96EE98879329AEFF6528A27 /* OptionsMenuDisplayBehaviour.swift */; };
 		53880AFB141856AD6207F65A91D9B8EA /* BottomSheetMenuOptions.storyboard in Sources */ = {isa = PBXBuildFile; fileRef = 2D75C9D72F25841B48BB01D39286B5D4 /* BottomSheetMenuOptions.storyboard */; };
 		53D4DA2DFE0598549FE8DEAD665060E8 /* PopUpMenuDisplayBehaviour.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1754F0502704F4B2F672A9B4858D80F /* PopUpMenuDisplayBehaviour.swift */; };
@@ -62,7 +61,6 @@
 		73C6AE31BDDFAD59FC6AB14A9E67A2FC /* OptionsMenuDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7810783B8D1CC7902C20B55312715366 /* OptionsMenuDelegate.swift */; };
 		761DFFB0122C787EA25FA7D071A7909B /* MaterialShadowElevations.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C41AC240D16B6AFE477325A60C11964 /* MaterialShadowElevations.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		77082EB897BB133368A982E6D9A4BB35 /* MDCDraggableView.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B83CC040CE35A37C5D6B0251CFE2663 /* MDCDraggableView.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		77AC45F9AC469A8055B8AF17FB12529A /* OptionMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834545FF3E2D55107F8639389F4609AF /* OptionMenu.swift */; };
 		7A7303604DD50F392BB2F461756F204D /* MDCRectangleShapeGenerator.h in Headers */ = {isa = PBXBuildFile; fileRef = B6BA7E1F22E94A8BBC35880C0B6953F6 /* MDCRectangleShapeGenerator.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7DC1AE468D58DA545AE636B773C2FD97 /* MDCCornerTreatment.h in Headers */ = {isa = PBXBuildFile; fileRef = D69DE00233B228250D5C7424533C7010 /* MDCCornerTreatment.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7F2A09764C62B479DD5B85DF01706405 /* Localize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C794DDCC813C552D8C4859FF7CC2F0 /* Localize.swift */; };
@@ -164,7 +162,7 @@
 		0DDE665AD24558C11F8F87397B775444 /* MaterialComponents.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MaterialComponents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E15BEE1681D8740CFCD698A939620D1 /* MDCSlantedRectShapeGenerator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MDCSlantedRectShapeGenerator.m; path = components/ShapeLibrary/src/MDCSlantedRectShapeGenerator.m; sourceTree = "<group>"; };
 		0EA41051D35B89550214F705FDCBFC28 /* MaterialComponents-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MaterialComponents-umbrella.h"; sourceTree = "<group>"; };
-		0FD947CF697382E63F6B28AFFDA646E9 /* Pods_OptionMenu_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_OptionMenu_Tests.framework; path = "Pods-OptionMenu_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0FD947CF697382E63F6B28AFFDA646E9 /* Pods_OptionMenu_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OptionMenu_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		100E0B3145B16C24E5A70CC86AC690BC /* BottomSheetMenuDisplayBehaviour.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BottomSheetMenuDisplayBehaviour.swift; sourceTree = "<group>"; };
 		106013968FAEC03F8DE2E47FFAFF29B1 /* Pods-OptionMenu_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-OptionMenu_Tests-Info.plist"; sourceTree = "<group>"; };
 		10BB49659C025048D89565CC61CCAB3D /* String+LocalizeBundle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+LocalizeBundle.swift"; path = "Sources/String+LocalizeBundle.swift"; sourceTree = "<group>"; };
@@ -188,7 +186,7 @@
 		2C41AC240D16B6AFE477325A60C11964 /* MaterialShadowElevations.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MaterialShadowElevations.h; path = components/ShadowElevations/src/MaterialShadowElevations.h; sourceTree = "<group>"; };
 		2CF7D41C3302128A60E8255953BE0524 /* MaterialMathDummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MaterialMathDummy.m; path = components/private/Math/src/MaterialMathDummy.m; sourceTree = "<group>"; };
 		2D75C9D72F25841B48BB01D39286B5D4 /* BottomSheetMenuOptions.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; path = BottomSheetMenuOptions.storyboard; sourceTree = "<group>"; };
-		2ECF488EFD24A1B916546FB54E5E6827 /* Localize_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Localize_Swift.framework; path = "Localize-Swift.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2ECF488EFD24A1B916546FB54E5E6827 /* Localize_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Localize_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		342E585A09A786AAAD5D96C9230E124B /* MDCBottomSheetController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MDCBottomSheetController.h; path = components/BottomSheet/src/MDCBottomSheetController.h; sourceTree = "<group>"; };
 		35536E5F1FDC3A716FCD932D73CEFB36 /* UIViewController+MaterialBottomSheet.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+MaterialBottomSheet.m"; path = "components/BottomSheet/src/UIViewController+MaterialBottomSheet.m"; sourceTree = "<group>"; };
 		3AC9A157489558D05B4B0D27050B172E /* MaterialComponents-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MaterialComponents-prefix.pch"; sourceTree = "<group>"; };
@@ -214,7 +212,7 @@
 		6B972A73D173769CA710172359127489 /* MDCBottomSheetPresentationController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MDCBottomSheetPresentationController.h; path = components/BottomSheet/src/MDCBottomSheetPresentationController.h; sourceTree = "<group>"; };
 		6D0FC6D1C96EE98879329AEFF6528A27 /* OptionsMenuDisplayBehaviour.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OptionsMenuDisplayBehaviour.swift; sourceTree = "<group>"; };
 		718E8A4FB6143E67BCE9D638F83895C4 /* MDCShapedView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MDCShapedView.m; path = components/Shapes/src/MDCShapedView.m; sourceTree = "<group>"; };
-		73E9A2BDDDBBC51674279906878D7E09 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		73E9A2BDDDBBC51674279906878D7E09 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		7518C3B08F317CCA3906250795CF2B49 /* MaterialApplication.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MaterialApplication.h; path = components/private/Application/src/MaterialApplication.h; sourceTree = "<group>"; };
 		75B5ACD5C851266F896DB87068A7DCBA /* MDCRectangleShapeGenerator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MDCRectangleShapeGenerator.m; path = components/Shapes/src/MDCRectangleShapeGenerator.m; sourceTree = "<group>"; };
 		75CB184EA14F1C9A147008CEB2F9BBFB /* OptionMenu.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = OptionMenu.modulemap; sourceTree = "<group>"; };
@@ -226,19 +224,18 @@
 		7BF5FC2146B9F73005AAFEE5202AB41D /* MaterialShapeLibrary.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MaterialShapeLibrary.h; path = components/ShapeLibrary/src/MaterialShapeLibrary.h; sourceTree = "<group>"; };
 		7F2E7EAAC2C5EC185703A2E0ABDF971A /* MDCPillShapeGenerator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MDCPillShapeGenerator.m; path = components/ShapeLibrary/src/MDCPillShapeGenerator.m; sourceTree = "<group>"; };
 		814406646C2A1A087271BCD3CEC80392 /* MDCTriangleEdgeTreatment.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MDCTriangleEdgeTreatment.m; path = components/ShapeLibrary/src/MDCTriangleEdgeTreatment.m; sourceTree = "<group>"; };
-		827B527882F49FF5E12CAF0C7AC3D3A8 /* OptionMenu.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = OptionMenu.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		834545FF3E2D55107F8639389F4609AF /* OptionMenu.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OptionMenu.swift; path = OptionMenu/Classes/OptionMenu.swift; sourceTree = "<group>"; };
+		827B527882F49FF5E12CAF0C7AC3D3A8 /* OptionMenu.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = OptionMenu.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		86C5D3F2B70388098EC30721A7F3B240 /* MDCMath.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MDCMath.h; path = components/private/Math/src/MDCMath.h; sourceTree = "<group>"; };
 		8DF06FA3213A323727D167DFBBB45E77 /* MDCTriangleEdgeTreatment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MDCTriangleEdgeTreatment.h; path = components/ShapeLibrary/src/MDCTriangleEdgeTreatment.h; sourceTree = "<group>"; };
 		8FCD5885BA2950BE2ACAA69A86E142BE /* OptionsMenuDataSource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OptionsMenuDataSource.swift; sourceTree = "<group>"; };
 		95C794DDCC813C552D8C4859FF7CC2F0 /* Localize.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Localize.swift; path = Sources/Localize.swift; sourceTree = "<group>"; };
 		98497ADD359E815BD50D373F10B2D869 /* MDCSlantedRectShapeGenerator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MDCSlantedRectShapeGenerator.h; path = components/ShapeLibrary/src/MDCSlantedRectShapeGenerator.h; sourceTree = "<group>"; };
 		987F76700CBD4791B690839849FE5ECC /* MDCDraggableView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MDCDraggableView.m; path = components/BottomSheet/src/private/MDCDraggableView.m; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9F26A80B49DAABBBD5BF2706B7B7DEA9 /* MDCShapedShadowLayer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MDCShapedShadowLayer.m; path = components/Shapes/src/MDCShapedShadowLayer.m; sourceTree = "<group>"; };
 		A1E3D9BDADBA79068BF6CA7D62FE63DC /* MDCCutCornerTreatment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MDCCutCornerTreatment.h; path = components/ShapeLibrary/src/MDCCutCornerTreatment.h; sourceTree = "<group>"; };
 		A2A8DFEC97D2A1BAC1BFDCB158FE5B63 /* MDCCornerTreatment+CornerTypeInitalizer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "MDCCornerTreatment+CornerTypeInitalizer.m"; path = "components/ShapeLibrary/src/MDCCornerTreatment+CornerTypeInitalizer.m"; sourceTree = "<group>"; };
-		A34157B3708EDB7D17422B3D92F591D2 /* MaterialComponents.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MaterialComponents.framework; path = MaterialComponents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A34157B3708EDB7D17422B3D92F591D2 /* MaterialComponents.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MaterialComponents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6471A41E90432324E9223D4BA5FF715 /* UIApplication+AppExtensions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIApplication+AppExtensions.m"; path = "components/private/Application/src/UIApplication+AppExtensions.m"; sourceTree = "<group>"; };
 		AA43E8C8D935D0CE3CA7297AE099E847 /* MenuPopOverView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MenuPopOverView.m; sourceTree = "<group>"; };
 		AB6BB9B7CF6F658DDD90DB5F68996452 /* Localize-Swift-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Localize-Swift-Info.plist"; sourceTree = "<group>"; };
@@ -252,7 +249,7 @@
 		C32F5F6D8417CD08ED559E70CF12C276 /* MaterialShadowElevationsDummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MaterialShadowElevationsDummy.m; path = components/ShadowElevations/src/MaterialShadowElevationsDummy.m; sourceTree = "<group>"; };
 		C47E87FD3D0135E788619DADD38A6050 /* Pods-OptionMenu_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-OptionMenu_Tests-dummy.m"; sourceTree = "<group>"; };
 		C4C9F65F19F495386E1BDF490925BF02 /* MDCCutCornerTreatment.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MDCCutCornerTreatment.m; path = components/ShapeLibrary/src/MDCCutCornerTreatment.m; sourceTree = "<group>"; };
-		C4D43F56BE2DD88CD6D5DA80565654CF /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		C4D43F56BE2DD88CD6D5DA80565654CF /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		CC1F00A11CA3F002F7DCF903ABA5C36F /* Localize-Swift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Localize-Swift-prefix.pch"; sourceTree = "<group>"; };
 		CE8D1FE1A287A9D633F051F61ECF66A6 /* MDCShadowLayer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MDCShadowLayer.m; path = components/ShadowLayer/src/MDCShadowLayer.m; sourceTree = "<group>"; };
 		D27882BB8DF70C625417981B037FFAAE /* ListOptionsMenuContentViewControllerDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ListOptionsMenuContentViewControllerDelegate.swift; sourceTree = "<group>"; };
@@ -273,9 +270,8 @@
 		F52BA4D1C238FF5254E819D4FE19A752 /* MDCPillShapeGenerator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MDCPillShapeGenerator.h; path = components/ShapeLibrary/src/MDCPillShapeGenerator.h; sourceTree = "<group>"; };
 		F80F9856C5876DB3858DB4DEE9F0782B /* Pods-OptionMenu_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-OptionMenu_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		F80F9D501B5F907FECE63605E06817D3 /* MDCSheetContainerView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MDCSheetContainerView.m; path = components/BottomSheet/src/private/MDCSheetContainerView.m; sourceTree = "<group>"; };
-		F897C79BA1CE26F445AAC4A5E519B995 /* OptionMenu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = OptionMenu.framework; path = OptionMenu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F897C79BA1CE26F445AAC4A5E519B995 /* OptionMenu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OptionMenu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA1A56E3A521FC7E11FACA89EEB7307F /* MDCCurvedCornerTreatment.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MDCCurvedCornerTreatment.m; path = components/ShapeLibrary/src/MDCCurvedCornerTreatment.m; sourceTree = "<group>"; };
-		FBB7DDAD9F8FFDEB7F523702673FC95F /* ViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = OptionMenu/Classes/ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -412,7 +408,6 @@
 			children = (
 				F1754F0502704F4B2F672A9B4858D80F /* PopUpMenuDisplayBehaviour.swift */,
 			);
-			name = PopUp;
 			path = PopUp;
 			sourceTree = "<group>";
 		};
@@ -472,7 +467,6 @@
 			children = (
 				131459CE9249B1149088558C5C1E8BBC /* OptionsMenuStyle.swift */,
 			);
-			name = Style;
 			path = Style;
 			sourceTree = "<group>";
 		};
@@ -521,7 +515,6 @@
 			children = (
 				8FCD5885BA2950BE2ACAA69A86E142BE /* OptionsMenuDataSource.swift */,
 			);
-			name = DataSource;
 			path = DataSource;
 			sourceTree = "<group>";
 		};
@@ -533,7 +526,6 @@
 				E63A71F0D0EDA3E4638A73D8824B9437 /* Horizontal */,
 				3D595830697B93C1B4A7E5BC27694CF0 /* PopUp */,
 			);
-			name = Behaviour;
 			path = Behaviour;
 			sourceTree = "<group>";
 		};
@@ -575,7 +567,6 @@
 				D27882BB8DF70C625417981B037FFAAE /* ListOptionsMenuContentViewControllerDelegate.swift */,
 				5A5491FFA4AF21257830E8888DCA1242 /* OptionsMenuContentViewControllerDelegate.swift */,
 			);
-			name = "BottomSheet Content Controllers";
 			path = "BottomSheet Content Controllers";
 			sourceTree = "<group>";
 		};
@@ -608,16 +599,13 @@
 				1B1414A24D2B3D1C215FBF538B31B712 /* BottomSheetMenuOptionsContainer.swift */,
 				C606CEB2446571EB9D8F5D6ADF1D43AD /* BottomSheet Content Controllers */,
 			);
-			name = BottomSheet;
 			path = BottomSheet;
 			sourceTree = "<group>";
 		};
 		CB3DF7013FC760B77A590EBD7BBEBFE1 /* OptionMenu */ = {
 			isa = PBXGroup;
 			children = (
-				834545FF3E2D55107F8639389F4609AF /* OptionMenu.swift */,
 				27CCC3C471C718C96E7B6F750E51CA04 /* UIViewControllerExtension.swift */,
-				FBB7DDAD9F8FFDEB7F523702673FC95F /* ViewController.swift */,
 				A9884EC88950F9819C6CD8D2599F0D19 /* Extensions */,
 				FC1124FFAB7FC9B4E6F6BF0203E520BD /* horizontalMenu */,
 				8928D653810928DC6D79673B52A87BBF /* Menu */,
@@ -660,7 +648,6 @@
 				6AAE2FF81E534C1F1A215136308CFE48 /* String+LocalizeTableName.swift */,
 				5F069F6D95EC258D8FEA12E4DA92F46B /* Support Files */,
 			);
-			name = "Localize-Swift";
 			path = "Localize-Swift";
 			sourceTree = "<group>";
 		};
@@ -678,7 +665,6 @@
 				4646676D43D672B237F0D9CA74546011 /* HorizontalMenuDisplayBehaviour.swift */,
 				0B8F74C51F93D47E71628770E2BA1198 /* HorizontalOptionsMenu.swift */,
 			);
-			name = Horizontal;
 			path = Horizontal;
 			sourceTree = "<group>";
 		};
@@ -693,7 +679,6 @@
 				C7153F8334D377CCFE614CC399E5F4FD /* Shapes */,
 				236ACB6C3897D9675106269C67D159BF /* Support Files */,
 			);
-			name = MaterialComponents;
 			path = MaterialComponents;
 			sourceTree = "<group>";
 		};
@@ -702,7 +687,6 @@
 			children = (
 				7810783B8D1CC7902C20B55312715366 /* OptionsMenuDelegate.swift */,
 			);
-			name = Delegate;
 			path = Delegate;
 			sourceTree = "<group>";
 		};
@@ -966,7 +950,6 @@
 				1BC08D4208463549755E00124FBF1E28 /* ListOptionsMenuContentViewControllerDelegate.swift in Sources */,
 				A39CCD0B352AFB074BE886DF4E522FEB /* MenuPopOverView.m in Sources */,
 				04A7688F5D8E8F956BAA5B56849305F8 /* OptionMenu-dummy.m in Sources */,
-				77AC45F9AC469A8055B8AF17FB12529A /* OptionMenu.swift in Sources */,
 				889FC047B9D97928395DED95BCEDCA25 /* OptionsMenu.swift in Sources */,
 				290C98EDE975193C4F176153D32AB186 /* OptionsMenuContentViewControllerDelegate.swift in Sources */,
 				9AEC19ACF9DB4F89071DCCDCC1BC9615 /* OptionsMenuDataSource.swift in Sources */,
@@ -976,7 +959,6 @@
 				5FE81F191CE137387144DB54A60A7D91 /* OptionsMenuStyle.swift in Sources */,
 				53D4DA2DFE0598549FE8DEAD665060E8 /* PopUpMenuDisplayBehaviour.swift in Sources */,
 				0BAA9596C7D41395C868B6B779A0323B /* UIViewControllerExtension.swift in Sources */,
-				4C85D3A1C0018DA3907320496A62CEAB /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1351,8 +1333,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
