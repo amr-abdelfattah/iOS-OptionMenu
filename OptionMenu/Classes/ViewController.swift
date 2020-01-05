@@ -2,8 +2,8 @@
 //  ViewController.swift
 //  OptionMenu
 //
-//  Created by admin on 1/16/19.
-//  Copyright © 2019 Amr. All rights reserved.
+//  Created by Amr Elsayed on 1/16/19.
+//  Copyright © 2019 Amr Elsayed. All rights reserved.
 //
 
 import UIKit

@@ -2,7 +2,7 @@
 //  OptionsMenu.swift
 //  Al-Mushaf
 //
-//  Created by admin on 7/31/18.
+//  Created by Amr Elsayed on 7/31/18.
 //  Copyright © 2018 SmarTech. All rights reserved.
 //
 
@@ -15,17 +15,11 @@ open class OptionsMenu : NSObject {
     public weak var dataSource : OptionsMenuDataSource?
     public weak var delegate : OptionsMenuDelegate?
     public var style : OptionsMenuStyle?
-    public var size : CGSize?
-    public var data: [String: Any]?
-//    var optionsMenuContentViewControllerDelegate : OptionsMenuContentViewControllerDelegate?
     
     public var behaviour : OptionsMenuDisplayBehaviour?
     
-    public init(parentViewController : UIViewController, data: [String: Any]? = nil) {
-        
+    public init(parentViewController : UIViewController) {
         self.parentViewController = parentViewController
-        self.data = data
-        
     }
     
     open func show(animated: Bool) {

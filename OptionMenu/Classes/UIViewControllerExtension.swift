@@ -15,10 +15,10 @@ import UIKit
 
 public extension UIViewController {
     
-    public func showOptionsMenu(behaviour: OptionsMenuDisplayBehaviour, dataSource: OptionsMenuDataSource, delegate: OptionsMenuDelegate, style: OptionsMenuStyle, data: [String: Any]? = nil) {
+    public func showOptionsMenu(behaviour: OptionsMenuDisplayBehaviour, dataSource: OptionsMenuDataSource, delegate: OptionsMenuDelegate, style: OptionsMenuStyle) {
      
         
-        let optionsMenu = OptionsMenu(parentViewController: self, data: data)
+        let optionsMenu = OptionsMenu(parentViewController: self)
         optionsMenu.behaviour =  behaviour
         optionsMenu.dataSource = dataSource
         optionsMenu.delegate = delegate

@@ -2,7 +2,7 @@
 //  VerseOptionsViewController2.swift
 //  Makka
 //
-//  Created by admin on 7/30/18.
+//  Created by Amr Elsayed on 7/30/18.
 //  Copyright © 2018 SmarTech. All rights reserved.
 //
 
@@ -16,9 +16,15 @@ class BottomSheetMenuOptionsContainer: UITableViewController {
     private let defaultUnselectedTextColor = UIColor(hex: "444444")
     private let defaultSelectedTextColor = UIColor(hex: "d7b93e")
     private let defaultItemBackgroundColor = UIColor(hex: "eeeeee")
+    private let defaultItemHighlightColor = UIColor.clear
+    
     private let defaultBackgroundColor = UIColor(hex: "eeeeee")
     private let defaultHeaderBackgroundColor = UIColor(hex: "eeeeee")
     private let defaultTitleColor = UIColor(hex: "777777")
+    
+    private let defaultHolderColor = UIColor(hex: "faf9f3").withAlphaComponent(0.7)
+    
+    private let defaultSeparatorColor = UIColor.clear
     
     private let defaultHeaderHeight = 32
     
@@ -99,22 +105,15 @@ class BottomSheetMenuOptionsContainer: UITableViewController {
         
         self.headerView.backgroundColor = UIColor.clear
         initHolderImageViewColor()
-        self.titleLabel.textColor = self.style?.optionsMenuTitleColor(self.optionsMenu) ?? defaultTitleColor
+        self.titleLabel.textColor = self.style?.optionsMenuHeaderTintColor(self.optionsMenu) ?? defaultTitleColor
         
-        self.titleLabel.backgroundColor = self.style?.optionsMenuHeaderColor(self.optionsMenu) ?? defaultHeaderBackgroundColor
+        self.titleLabel.backgroundColor = self.style?.optionsMenuHeaderBackgroundColor(self.optionsMenu) ?? defaultHeaderBackgroundColor
         
     }
     
     func initHolderImageViewColor() {
         
-      /*  if UIDecorator.isNightMode() {
-            
-            self.holderImageView.backgroundColor = UIColor(hex: "faf9f3").withAlphaComponent(0.2)
-            
-        } else {
-            */
-            self.holderImageView.backgroundColor = UIColor(hex: "faf9f3").withAlphaComponent(0.7)
-      //  }
+        self.holderImageView.backgroundColor = self.style?.optionsMenuHolderTintColor(self.optionsMenu) ?? defaultHolderColor
         
     }
     
@@ -153,6 +152,8 @@ class BottomSheetMenuOptionsContainer: UITableViewController {
         self.tableView.showsHorizontalScrollIndicator = false
         self.tableView.showsVerticalScrollIndicator = false
         
+        self.tableView.separatorColor = self.style?.optionsMenuDividerColor(self.optionsMenu) ?? defaultSeparatorColor
+                
     }
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
@@ -228,7 +229,7 @@ extension BottomSheetMenuOptionsContainer {
             
             let tintColor = self.style?.optionsMenu(self.optionsMenu, tintColorForItemAtIndex: index) ?? (menuItem.selected ? defaultSelectedTintColor : defaultUnselectedTintColor)
             
-            let textColor = self.style?.optionsMenu(self.optionsMenu, tintColorForItemAtIndex: index) ?? (menuItem.selected ? defaultSelectedTextColor : defaultUnselectedTextColor)
+            let textColor = menuItem.selected ? (self.style?.optionsMenu(self.optionsMenu, selectedTintColorForItemAtIndex: index) ?? defaultSelectedTextColor) : (self.style?.optionsMenu(self.optionsMenu, tintColorForItemAtIndex: index) ?? defaultUnselectedTextColor)
        
             cell.textLabel?.text = menuItem.title
             cell.textLabel?.textColor = textColor
@@ -239,6 +240,11 @@ extension BottomSheetMenuOptionsContainer {
             cell.imageView?.tintColor = tintColor
             
             cell.backgroundColor = self.style?.optionsMenu(self.optionsMenu, backgroundColorForItemAtIndex: index) ?? defaultItemBackgroundColor
+            
+            let colorView = UIView()
+            colorView.backgroundColor = self.style?.optionsMenu(self.optionsMenu, highlightColorForItemAtIndex: index) ?? defaultItemHighlightColor
+
+            cell.selectedBackgroundView = colorView
             
         }
         return cell

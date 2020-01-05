@@ -2,7 +2,7 @@
 //  BottomSheetMenuDisplayBehaviour.swift
 //  Al-Mushaf
 //
-//  Created by admin on 7/31/18.
+//  Created by Amr Elsayed on 7/31/18.
 //  Copyright © 2018 SmarTech. All rights reserved.
 //
 

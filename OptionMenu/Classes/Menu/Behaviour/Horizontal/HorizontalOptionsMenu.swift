@@ -2,7 +2,7 @@
 //  HorizontalOptionsMenu.swift
 //  Al-Mushaf
 //
-//  Created by admin on 8/5/18.
+//  Created by Amr Elsayed on 8/5/18.
 //  Copyright © 2018 SmarTech. All rights reserved.
 //
 
@@ -59,7 +59,7 @@ class HorizontalOptionsMenu : MenuPopOverView {
     func initColors() {
         
         self.popOverBackgroundColor = self.optionsStyle?.optionsMenuBackgroundColor(self.optionsMenu) ?? defaultBackgroundColor
-        self.popOverTextColor = self.optionsStyle?.optionsMenuTextColor(self.optionsMenu) ?? defaultTextColor
+        self.popOverTextColor = self.optionsStyle?.optionsMenuTintColor(self.optionsMenu) ?? defaultTextColor
         self.popOverDividerColor = self.optionsStyle?.optionsMenuDividerColor(self.optionsMenu) ?? defaultDividerColor
         self.popOverHighlightColor = self.optionsStyle?.optionsMenuHighlightColor(self.optionsMenu) ?? defaultHighlightColor
         

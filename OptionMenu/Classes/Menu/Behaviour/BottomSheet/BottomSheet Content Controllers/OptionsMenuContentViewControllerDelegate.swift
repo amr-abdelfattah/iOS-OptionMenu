@@ -2,7 +2,7 @@
 //  OptionsMenuContentViewController.swift
 //  Al-Mushaf
 //
-//  Created by admin on 8/13/18.
+//  Created by Amr Elsayed on 8/13/18.
 //  Copyright © 2018 SmarTech. All rights reserved.
 //
 

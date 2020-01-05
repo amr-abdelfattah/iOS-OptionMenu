@@ -2,7 +2,7 @@
 //  OptionsMenuDataSource.swift
 //  Al-Mushaf
 //
-//  Created by admin on 8/1/18.
+//  Created by Amr Elsayed on 8/1/18.
 //  Copyright © 2018 SmarTech. All rights reserved.
 //
 
@@ -15,27 +15,15 @@ public protocol OptionsMenuDataSource : class {
     
 }
 
-public protocol ListOptionsMenuDataSource : OptionsMenuDataSource {
+public protocol HorizontalListOptionsMenuDataSource : OptionsMenuDataSource {
     
-    // Can be Ignored
-    func options(_ optionsMenu: OptionsMenu) -> [OptionsMenuItem]?
-    
-    // Needed for Horizontal Behaviour Only, Can be replaced
     func optionsTitles(_ optionsMenu: OptionsMenu) -> [String]?
-    
-    func optionsMenu(_ optionsMenu: OptionsMenu, optionAtIndex index: Int) -> OptionsMenuItem?
-    func optionsCount(_ optionsMenu: OptionsMenu) -> Int
     
 }
 
-public extension ListOptionsMenuDataSource {
+public protocol ListOptionsMenuDataSource : OptionsMenuDataSource {
     
-    func options(_ optionsMenu: OptionsMenu) -> [OptionsMenuItem]? {
-        return nil
-    }
-    
-    func optionsTitles(_ optionsMenu: OptionsMenu) -> [String]? {
-        return nil
-    }
+    func optionsMenu(_ optionsMenu: OptionsMenu, optionAtIndex index: Int) -> OptionsMenuItem?
+    func optionsCount(_ optionsMenu: OptionsMenu) -> Int
     
 }

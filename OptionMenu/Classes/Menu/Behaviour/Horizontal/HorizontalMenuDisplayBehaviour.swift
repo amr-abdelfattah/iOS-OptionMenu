@@ -2,7 +2,7 @@
 //  HorizontalMenuDisplayBehaviour.swift
 //  Al-Mushaf
 //
-//  Created by admin on 8/5/18.
+//  Created by Amr Elsayed on 8/5/18.
 //  Copyright © 2018 SmarTech. All rights reserved.
 //
 
@@ -35,7 +35,7 @@ extension HorizontalMenuDisplayBehaviour : OptionsMenuDisplayBehaviour {
         
         initOptionsContainerViewController(optionsMenu)
         
-       self.horizontalOptionsMenu.presentPopover(from: CGRect(origin: popOverPoint, size: CGSize.zero), in: optionsMenu.parentViewController.view, withStrings: (optionsMenu.dataSource as? ListOptionsMenuDataSource)?.optionsTitles(optionsMenu))
+       self.horizontalOptionsMenu.presentPopover(from: CGRect(origin: popOverPoint, size: CGSize.zero), in: optionsMenu.parentViewController.view, withStrings: (optionsMenu.dataSource as? HorizontalListOptionsMenuDataSource)?.optionsTitles(optionsMenu))
         
         self.horizontalOptionsMenu.becomeFirstResponder()
         

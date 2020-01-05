@@ -2,33 +2,32 @@
 //  OptionsMenuStyle.swift
 //  Al-Mushaf
 //
-//  Created by admin on 8/7/18.
+//  Created by Amr Elsayed on 8/7/18.
 //  Copyright © 2018 SmarTech. All rights reserved.
 //
 
 import Foundation
 import UIKit
 
-// ALL these functions need to be minimized
 public protocol OptionsMenuStyle : class {
-    
-    func optionsMenuTitleColor(_ optionsMenu: OptionsMenu) -> UIColor?
-    
-    func optionsMenuBackgroundColor(_ optionsMenu: OptionsMenu) -> UIColor?
-    
-    func optionsMenuHeaderColor(_ optionsMenu: OptionsMenu) -> UIColor?
+        
+    func optionsMenuHeaderBackgroundColor(_ optionsMenu: OptionsMenu) -> UIColor?
     
     func optionsMenuHeaderTintColor(_ optionsMenu: OptionsMenu) -> UIColor?
     
-    func optionsMenuTextColor(_ optionsMenu: OptionsMenu) -> UIColor?
+    func optionsMenuHolderTintColor(_ optionsMenu: OptionsMenu) -> UIColor?
     
+    func optionsMenuBackgroundColor(_ optionsMenu: OptionsMenu) -> UIColor?
+        
     func optionsMenuTintColor(_ optionsMenu: OptionsMenu) -> UIColor?
     
-    func optionsMenuDividerColor(_ optionsMenu: OptionsMenu) -> UIColor?
-    
     func optionsMenuHighlightColor(_ optionsMenu: OptionsMenu) -> UIColor?
-    
+
+    func optionsMenuDividerColor(_ optionsMenu: OptionsMenu) -> UIColor?
+        
     func optionsMenuTitleFont(_ optionsMenu: OptionsMenu) -> UIFont?
+    
+    func optionsMenuFont(_ optionsMenu: OptionsMenu) -> UIFont?
     
 }
 
@@ -36,56 +35,89 @@ public protocol ListOptionsMenuStyle : OptionsMenuStyle {
  
     func optionsMenu(_ optionsMenu: OptionsMenu, tintColorForItemAtIndex index: Int) -> UIColor?
     
-    func optionsMenu(_ optionsMenu: OptionsMenu, textColorForItemAtIndex index: Int) -> UIColor?
-    
+    func optionsMenu(_ optionsMenu: OptionsMenu, selectedTintColorForItemAtIndex index: Int) -> UIColor?
+        
     func optionsMenu(_ optionsMenu: OptionsMenu, backgroundColorForItemAtIndex index: Int) -> UIColor?
+    
+    func optionsMenu(_ optionsMenu: OptionsMenu, highlightColorForItemAtIndex index: Int) -> UIColor?
     
     func optionsMenu(_ optionsMenu: OptionsMenu, fontForItemAtIndex index: Int) -> UIFont?
     
 }
 
-extension OptionsMenuStyle {
+public extension ListOptionsMenuStyle {
     
-    func optionsMenuHeaderColor(_ optionsMenu: OptionsMenu) -> UIColor? {
+    func optionsMenu(_ optionsMenu: OptionsMenu, tintColorForItemAtIndex index: Int) -> UIColor? {
         
-        return nil
+        return self.optionsMenuTintColor(optionsMenu)
         
+    }
+       
+    func optionsMenu(_ optionsMenu: OptionsMenu, selectedTintColorForItemAtIndex index: Int) -> UIColor? {
+        
+        return self.optionsMenu(optionsMenu, tintColorForItemAtIndex: index)
+        
+    }
+    
+    func optionsMenu(_ optionsMenu: OptionsMenu, backgroundColorForItemAtIndex index: Int) -> UIColor? {
+        
+        return self.optionsMenuBackgroundColor(optionsMenu)
+        
+    }
+    
+    func optionsMenu(_ optionsMenu: OptionsMenu, highlightColorForItemAtIndex index: Int) -> UIColor? {
+        
+        return self.optionsMenuHighlightColor(optionsMenu)
+        
+    }
+    
+    func optionsMenu(_ optionsMenu: OptionsMenu, fontForItemAtIndex index: Int) -> UIFont? {
+        
+        return self.optionsMenuFont(optionsMenu)
+        
+    }
+    
+}
+
+public extension OptionsMenuStyle {
+    
+    private var defaultHolderColor: UIColor {
+        UIColor(hex: "faf9f3").withAlphaComponent(0.7)
+    }
+
+       
+    private var defaultSeparatorColor: UIColor {
+        UIColor.clear
+    }
+    
+    
+    func optionsMenuHeaderBackgroundColor(_ optionsMenu: OptionsMenu) -> UIColor? {
+        return self.optionsMenuBackgroundColor(optionsMenu)
     }
     
     func optionsMenuHeaderTintColor(_ optionsMenu: OptionsMenu) -> UIColor? {
-        
-        return nil
-        
+        return self.optionsMenuTintColor(optionsMenu)
     }
     
-    func optionsMenuTextColor(_ optionsMenu: OptionsMenu) -> UIColor? {
-        
-        return nil
-        
+    func optionsMenuHolderTintColor(_ optionsMenu: OptionsMenu) -> UIColor? {
+        return self.defaultHolderColor
     }
-    
-    func optionsMenuTintColor(_ optionsMenu: OptionsMenu) -> UIColor? {
-        
-        return nil
-        
-    }
-    
-    func optionsMenuDividerColor(_ optionsMenu: OptionsMenu) -> UIColor? {
-        
-        return nil
-        
-    }
+            
     
     func optionsMenuHighlightColor(_ optionsMenu: OptionsMenu) -> UIColor? {
-        
         return nil
+    }
+
+    func optionsMenuDividerColor(_ optionsMenu: OptionsMenu) -> UIColor? {
+        return self.defaultSeparatorColor
+    }
         
+    func optionsMenuTitleFont(_ optionsMenu: OptionsMenu) -> UIFont? {
+        return nil
     }
     
-    func optionsMenuTitleFont(_ optionsMenu: OptionsMenu) -> UIFont? {
-        
+    func optionsMenuFont(_ optionsMenu: OptionsMenu) -> UIFont? {
         return nil
-        
     }
     
 }

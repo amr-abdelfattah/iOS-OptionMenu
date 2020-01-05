@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		845C9D5123C1398D0015B7A0 /* ExampleOptionMenuStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845C9D5023C139490015B7A0 /* ExampleOptionMenuStyle.swift */; };
+		845C9D5323C14A7E0015B7A0 /* ExampleOptionMenuDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845C9D5223C14A7E0015B7A0 /* ExampleOptionMenuDataSource.swift */; };
+		845C9D5523C15D800015B7A0 /* UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845C9D5423C15D800015B7A0 /* UITests.swift */; };
+		845C9D5723C15DBB0015B7A0 /* ExampleOptionMenuDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845C9D5623C15DBB0015B7A0 /* ExampleOptionMenuDelegate.swift */; };
 		C9741BD14E3E5E7610D4A7DF /* Pods_OptionMenu_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F678EDD0898A981D74B02205 /* Pods_OptionMenu_Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -18,6 +22,10 @@
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		6D8ADC148FCFF9B252A1B7E6 /* Pods-OptionMenu_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OptionMenu_Tests.release.xcconfig"; path = "Target Support Files/Pods-OptionMenu_Tests/Pods-OptionMenu_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		845C9D5023C139490015B7A0 /* ExampleOptionMenuStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleOptionMenuStyle.swift; sourceTree = "<group>"; };
+		845C9D5223C14A7E0015B7A0 /* ExampleOptionMenuDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleOptionMenuDataSource.swift; sourceTree = "<group>"; };
+		845C9D5423C15D800015B7A0 /* UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITests.swift; sourceTree = "<group>"; };
+		845C9D5623C15DBB0015B7A0 /* ExampleOptionMenuDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleOptionMenuDelegate.swift; sourceTree = "<group>"; };
 		9F79465A40301DD7904884FF /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		A5A49FE7E40FEC79E563C07E /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		F678EDD0898A981D74B02205 /* Pods_OptionMenu_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OptionMenu_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,6 +55,7 @@
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
+				845C9D4F23C139040015B7A0 /* Example */,
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				607FACE81AFB9204008FA782 /* Tests */,
 				607FACD11AFB9204008FA782 /* Products */,
@@ -68,6 +77,7 @@
 			children = (
 				607FACEB1AFB9204008FA782 /* Tests.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
+				845C9D5423C15D800015B7A0 /* UITests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -88,6 +98,16 @@
 				A5A49FE7E40FEC79E563C07E /* LICENSE */,
 			);
 			name = "Podspec Metadata";
+			sourceTree = "<group>";
+		};
+		845C9D4F23C139040015B7A0 /* Example */ = {
+			isa = PBXGroup;
+			children = (
+				845C9D5023C139490015B7A0 /* ExampleOptionMenuStyle.swift */,
+				845C9D5223C14A7E0015B7A0 /* ExampleOptionMenuDataSource.swift */,
+				845C9D5623C15DBB0015B7A0 /* ExampleOptionMenuDelegate.swift */,
+			);
+			path = Example;
 			sourceTree = "<group>";
 		};
 		9A97FB7778F1AAE5BF5757B4 /* Frameworks */ = {
@@ -218,6 +238,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				845C9D5323C14A7E0015B7A0 /* ExampleOptionMenuDataSource.swift in Sources */,
+				845C9D5723C15DBB0015B7A0 /* ExampleOptionMenuDelegate.swift in Sources */,
+				845C9D5523C15D800015B7A0 /* UITests.swift in Sources */,
+				845C9D5123C1398D0015B7A0 /* ExampleOptionMenuStyle.swift in Sources */,
 				607FACEC1AFB9204008FA782 /* Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
