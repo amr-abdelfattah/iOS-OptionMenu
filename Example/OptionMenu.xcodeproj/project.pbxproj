@@ -355,6 +355,7 @@
 			baseConfigurationReference = 290F9448767C4FE42225E37A /* Pods-OptionMenu_Tests.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = NO;
 				DEVELOPMENT_TEAM = AGK4BZGF9Y;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
@@ -381,6 +382,7 @@
 			baseConfigurationReference = 6D8ADC148FCFF9B252A1B7E6 /* Pods-OptionMenu_Tests.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = NO;
 				DEVELOPMENT_TEAM = AGK4BZGF9Y;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",

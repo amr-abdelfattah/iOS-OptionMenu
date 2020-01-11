@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class HorizontalMenuDisplayBehaviour {
+public class HorizontalMenuDisplayBehaviour {
     
     var horizontalOptionsMenu : HorizontalOptionsMenu!
     let popOverPoint : CGPoint
@@ -31,7 +31,7 @@ class HorizontalMenuDisplayBehaviour {
 
 extension HorizontalMenuDisplayBehaviour : OptionsMenuDisplayBehaviour {
     
-    func display(_ optionsMenu: OptionsMenu, animated: Bool) {
+    public func display(_ optionsMenu: OptionsMenu, animated: Bool) {
         
         initOptionsContainerViewController(optionsMenu)
         
@@ -41,7 +41,7 @@ extension HorizontalMenuDisplayBehaviour : OptionsMenuDisplayBehaviour {
         
     }
     
-    func dismiss(animated: Bool) {
+    public func dismiss(animated: Bool) {
     }
     
 }
