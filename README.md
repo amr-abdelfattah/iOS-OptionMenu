@@ -7,8 +7,8 @@
 
 Showing an option menu should not require alot of stuff to create. This Framework support three themes (Material Design Bottom Sheet, PopOver, Horizontal) for the option menus. That is can be achieved using the minimum code configuration. 
 
-![Screenshot](ScreenShots/screenshot_1.png)
-![Screenshot](ScreenShots/screenshot_2.png)
+![Screenshot](https://github.com/amr-abdelfattah/iOS-OptionMenu/blob/v2.0.1/ScreenShots/screenshot_1.png)
+![Screenshot](https://github.com/amr-abdelfattah/iOS-OptionMenu/blob/v2.0.1/ScreenShots/screenshot_2.png)
 
 
 ## Usage
@@ -109,7 +109,7 @@ OptionMenu is available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'OptionMenu'
+pod 'OptionMenu', '~> 2.0'
 ```
 
 ## License
