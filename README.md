@@ -7,8 +7,8 @@
 
 Showing an option menu should not require alot of stuff to create. This Framework support three themes (Material Design Bottom Sheet, PopOver, Horizontal) for the option menus. That is can be achieved using the minimum code configuration. 
 
-![alt text](ScreenShots/screenshot_1.png)
-![alt text](ScreenShots/screenshot_2.png)
+![Screenshot](ScreenShots/screenshot_1.png)
+![Screenshot](ScreenShots/screenshot_2.png)
 
 ## Example
 
