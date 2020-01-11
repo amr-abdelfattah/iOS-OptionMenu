@@ -82,12 +82,12 @@ public extension ListOptionsMenuStyle {
 public extension OptionsMenuStyle {
     
     private var defaultHolderColor: UIColor {
-        UIColor(hex: "faf9f3").withAlphaComponent(0.7)
+        return UIColor(hex: "faf9f3").withAlphaComponent(0.7)
     }
 
        
     private var defaultSeparatorColor: UIColor {
-        UIColor.clear
+        return UIColor.clear
     }
     
     
