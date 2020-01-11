@@ -9,10 +9,10 @@ Pod::Spec.new do |spec|
     
     spec.platform     = :ios, '10.0'
     spec.source       = { :path => '.' }
-    spec.homepage         = 'https://github.com/amr-abdelfattah/iOS-Material-Bottom-Sheet'
+    spec.homepage         = 'https://github.com/amr-abdelfattah/iOS-OptionMenu'
     # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
     spec.license          = { :type => 'MIT', :file => 'LICENSE' }
-    spec.source           = { :git => 'https://github.com/amr-abdelfattah/iOS-Material-Bottom-Sheet.git', :tag => spec.version.to_s }
+    spec.source           = { :git => 'https://github.com/amr-abdelfattah/iOS-OptionMenu.git', :tag => spec.version.to_s }
     
     spec.ios.deployment_target  = '10.0'
     spec.source_files = 'OptionMenu/Classes/**/*'
