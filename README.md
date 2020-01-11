@@ -10,9 +10,6 @@ Showing an option menu should not require alot of stuff to create. This Framewor
 ![Screenshot](ScreenShots/screenshot_1.png)
 ![Screenshot](ScreenShots/screenshot_2.png)
 
-## Example
-
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 ## Usage
 
@@ -101,6 +98,10 @@ func show() {
 
 ## Requirements
 iOS 10+
+
+## Example
+
+To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 ## Installation
 
