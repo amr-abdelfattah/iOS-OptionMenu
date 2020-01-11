@@ -1,7 +1,7 @@
 # OptionMenu
 
 [![CI Status](https://img.shields.io/travis/Amr/OptionMenu.svg?style=flat)](https://travis-ci.org/Amr/OptionMenu)
-[![Version](V2.0.0)](https://cocoapods.org/pods/OptionMenu)
+[![Version](https://img.shields.io/cocoapods/v/OptionMenu.svg?style=flat)](https://cocoapods.org/pods/OptionMenu)
 [![License](https://img.shields.io/cocoapods/l/OptionMenu.svg?style=flat)](/LICENSE)
 [![Platform](https://img.shields.io/cocoapods/p/OptionMenu.svg?style=flat)](https://cocoapods.org/pods/OptionMenu)
 
