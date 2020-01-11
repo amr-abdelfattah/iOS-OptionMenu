@@ -2,7 +2,7 @@
 
 [![CI Status](https://img.shields.io/travis/Amr/OptionMenu.svg?style=flat)](https://travis-ci.org/Amr/OptionMenu)
 [![Version](https://img.shields.io/cocoapods/v/OptionMenu.svg?style=flat)](https://cocoapods.org/pods/OptionMenu)
-[![License](https://img.shields.io/cocoapods/l/OptionMenu.svg?style=flat)](https://cocoapods.org/pods/OptionMenu)
+[![License](https://img.shields.io/cocoapods/l/OptionMenu.svg?style=flat)](/LICENSE)
 [![Platform](https://img.shields.io/cocoapods/p/OptionMenu.svg?style=flat)](https://cocoapods.org/pods/OptionMenu)
 
 Showing an option menu should not require alot of stuff to create. This Framework support three themes (Material Design Bottom Sheet, PopOver, Horizontal) for the option menus. That is can be achieved using the minimum code configuration. 
