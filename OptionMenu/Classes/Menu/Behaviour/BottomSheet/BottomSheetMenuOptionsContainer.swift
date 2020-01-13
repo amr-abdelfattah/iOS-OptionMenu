@@ -150,7 +150,11 @@ class BottomSheetMenuOptionsContainer: UITableViewController {
         self.tableView.showsHorizontalScrollIndicator = false
         self.tableView.showsVerticalScrollIndicator = false
         
-        self.tableView.separatorColor = self.style?.optionsMenuDividerColor(self.optionsMenu) ?? self.tableView.separatorColor
+        if let sepratorColor = self.style?.optionsMenuDividerColor(self.optionsMenu) {
+         
+            self.tableView.separatorColor = sepratorColor
+            
+        }
                 
     }
     

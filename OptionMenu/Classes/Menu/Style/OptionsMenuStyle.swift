@@ -84,12 +84,6 @@ public extension OptionsMenuStyle {
     private var defaultHolderColor: UIColor {
         return UIColor(hex: "faf9f3").withAlphaComponent(0.7)
     }
-
-       
-    private var defaultSeparatorColor: UIColor {
-        return UIColor.clear
-    }
-    
     
     func optionsMenuHeaderBackgroundColor(_ optionsMenu: OptionsMenu) -> UIColor? {
         return self.optionsMenuBackgroundColor(optionsMenu)
@@ -109,7 +103,7 @@ public extension OptionsMenuStyle {
     }
 
     func optionsMenuDividerColor(_ optionsMenu: OptionsMenu) -> UIColor? {
-        return self.defaultSeparatorColor
+        return nil
     }
         
     func optionsMenuTitleFont(_ optionsMenu: OptionsMenu) -> UIFont? {
