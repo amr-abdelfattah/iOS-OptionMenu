@@ -24,8 +24,6 @@ class BottomSheetMenuOptionsContainer: UITableViewController {
     
     private let defaultHolderColor = UIColor(hex: "faf9f3").withAlphaComponent(0.7)
     
-    private let defaultSeparatorColor = UIColor.clear
-    
     private let defaultHeaderHeight = 32
     
     @IBOutlet var headerView : UIView!
@@ -152,7 +150,7 @@ class BottomSheetMenuOptionsContainer: UITableViewController {
         self.tableView.showsHorizontalScrollIndicator = false
         self.tableView.showsVerticalScrollIndicator = false
         
-        self.tableView.separatorColor = self.style?.optionsMenuDividerColor(self.optionsMenu) ?? defaultSeparatorColor
+        self.tableView.separatorColor = self.style?.optionsMenuDividerColor(self.optionsMenu) ?? self.tableView.separatorColor
                 
     }
     
