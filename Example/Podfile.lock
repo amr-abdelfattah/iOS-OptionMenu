@@ -1,30 +1,38 @@
 PODS:
-  - Localize-Swift (2.0.0)
-  - MaterialComponents/BottomSheet (85.0.1):
+  - Localize-Swift (3.1.0)
+  - MaterialComponents/BottomSheet (101.0.1):
+    - MaterialComponents/Elevation
     - MaterialComponents/private/KeyboardWatcher
     - MaterialComponents/private/Math
+    - MaterialComponents/ShadowElevations
+    - MaterialComponents/ShadowLayer
     - MaterialComponents/ShapeLibrary
     - MaterialComponents/Shapes
-  - MaterialComponents/private/Application (85.0.1)
-  - MaterialComponents/private/KeyboardWatcher (85.0.1):
+  - MaterialComponents/Elevation (101.0.1):
+    - MaterialComponents/private/Color
+    - MaterialComponents/private/Math
+  - MaterialComponents/private/Application (101.0.1)
+  - MaterialComponents/private/Color (101.0.1)
+  - MaterialComponents/private/KeyboardWatcher (101.0.1):
     - MaterialComponents/private/Application
-  - MaterialComponents/private/Math (85.0.1)
-  - MaterialComponents/ShadowElevations (85.0.1)
-  - MaterialComponents/ShadowLayer (85.0.1):
+  - MaterialComponents/private/Math (101.0.1)
+  - MaterialComponents/ShadowElevations (101.0.1)
+  - MaterialComponents/ShadowLayer (101.0.1):
     - MaterialComponents/ShadowElevations
-  - MaterialComponents/ShapeLibrary (85.0.1):
+  - MaterialComponents/ShapeLibrary (101.0.1):
     - MaterialComponents/private/Math
     - MaterialComponents/Shapes
-  - MaterialComponents/Shapes (85.0.1):
+  - MaterialComponents/Shapes (101.0.1):
+    - MaterialComponents/private/Color
     - MaterialComponents/private/Math
     - MaterialComponents/ShadowLayer
-  - OptionMenu (2.0.0):
-    - Localize-Swift (~> 2.0.0)
-    - MaterialComponents/BottomSheet (~> 85.0.0)
+  - OptionMenu (2.0.2):
+    - Localize-Swift (~> 3.1)
+    - MaterialComponents/BottomSheet (~> 101.0)
 
 DEPENDENCIES:
-  - Localize-Swift (~> 2.0.0)
-  - MaterialComponents/BottomSheet (~> 85.0.0)
+  - Localize-Swift (~> 3.1)
+  - MaterialComponents/BottomSheet (~> 101.0)
   - OptionMenu (from `../`)
 
 SPEC REPOS:
@@ -37,10 +45,10 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  Localize-Swift: c798ec9286494866f7068f85f7c71283ac5bdab4
-  MaterialComponents: e134130f8c81e27dbc4caa3165a8e8cd5b3468e9
-  OptionMenu: 5524d40cd4c7af3b5dfab32e8ede58605342aae6
+  Localize-Swift: 4bed4f0ccac8be2ec3517ee359da80ba2adb0fae
+  MaterialComponents: 24aa776d7c9d680dbfaa1398f92b68a9a72538fa
+  OptionMenu: 8117f8e85022b5de04b287b9709bcfb584ba88d7
 
-PODFILE CHECKSUM: ac20687a27dc793e5e4e42a5ecaf6bf5d9858d39
+PODFILE CHECKSUM: dbcd1507c4699cb19f40c4167c28974a93e71c1f
 
 COCOAPODS: 1.8.3

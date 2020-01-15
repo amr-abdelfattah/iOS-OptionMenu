@@ -6,7 +6,7 @@ inhibit_all_warnings!
 use_frameworks!
 target 'OptionMenu_Tests' do
   pod 'OptionMenu', :path => '../'
-  pod 'MaterialComponents/BottomSheet' , '~> 85.0'
-  pod 'Localize-Swift' , '~> 2.0'
+  pod 'MaterialComponents/BottomSheet' , '~> 101.0'
+  pod 'Localize-Swift' , '~> 3.1'
   
 end

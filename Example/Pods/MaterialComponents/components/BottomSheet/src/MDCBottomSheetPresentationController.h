@@ -82,6 +82,13 @@
 @property(nonatomic, assign) BOOL dismissOnBackgroundTap;
 
 /**
+ When set to false, the bottom sheet controller can't be dismissed by dragging the sheet down.
+
+ Defaults to @c YES.
+ */
+@property(nonatomic, assign) BOOL dismissOnDraggingDownSheet;
+
+/**
  This is used to set a custom height on the sheet view.
 
  @note If a positive value is passed then the sheet view will be that height even if
@@ -133,5 +140,13 @@
  Delegate to tell the presenter when to dismiss.
  */
 @property(nonatomic, weak, nullable) id<MDCBottomSheetPresentationControllerDelegate> delegate;
+
+/**
+ A block that is invoked when the @c MDCBottomSheetPresentationController receives a call to @c
+ traitCollectionDidChange:. The block is called after the call to the superclass.
+ */
+@property(nonatomic, copy, nullable) void (^traitCollectionDidChangeBlock)
+    (MDCBottomSheetPresentationController *_Nonnull bottomSheetPresentationController,
+     UITraitCollection *_Nullable previousTraitCollection);
 
 @end

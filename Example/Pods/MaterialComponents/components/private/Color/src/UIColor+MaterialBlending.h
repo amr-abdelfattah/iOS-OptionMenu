@@ -1,4 +1,4 @@
-// Copyright 2015-present the Material Components for iOS authors. All Rights Reserved.
+// Copyright 2019-present the Material Components for iOS authors. All Rights Reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,21 +14,16 @@
 
 #import <UIKit/UIKit.h>
 
-/**
- UIApplication extension for working with sharedApplication inside of app extensions.
- */
-@interface UIApplication (AppExtensions)
+@interface UIColor (MaterialBlending)
 
 /**
- Returns sharedApplication if it is available otherwise returns nil.
+ Blending a color over a background color using Alpha compositing technique.
+ More info about Alpha compositing: https://en.wikipedia.org/wiki/Alpha_compositing
 
- This is a wrapper around sharedApplication which is safe to compile and use in app extensions.
+ @param color UIColor value that sits on top.
+ @param backgroundColor UIColor on the background.
  */
-+ (UIApplication *)mdc_safeSharedApplication;
-
-/**
- Returns YES if called inside an application extension otherwise returns NO.
- */
-+ (BOOL)mdc_isAppExtension;
++ (nonnull UIColor *)mdc_blendColor:(nonnull UIColor *)color
+                withBackgroundColor:(nonnull UIColor *)backgroundColor;
 
 @end

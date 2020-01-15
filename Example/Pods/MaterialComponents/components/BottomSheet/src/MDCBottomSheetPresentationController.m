@@ -13,6 +13,9 @@
 // limitations under the License.
 
 #import "MDCBottomSheetPresentationController.h"
+
+#import <WebKit/WebKit.h>
+
 #import "MaterialMath.h"
 #import "private/MDCSheetContainerView.h"
 
@@ -31,8 +34,8 @@ static UIScrollView *MDCBottomSheetGetPrimaryScrollView(UIViewController *viewCo
 
   if ([viewController.view isKindOfClass:[UIScrollView class]]) {
     scrollView = (UIScrollView *)viewController.view;
-  } else if ([viewController.view isKindOfClass:[UIWebView class]]) {
-    scrollView = ((UIWebView *)viewController.view).scrollView;
+  } else if ([viewController.view isKindOfClass:[WKWebView class]]) {
+    scrollView = ((WKWebView *)viewController.view).scrollView;
   } else if ([viewController isKindOfClass:[UICollectionViewController class]]) {
     scrollView = ((UICollectionViewController *)viewController).collectionView;
   }
@@ -101,6 +104,8 @@ static UIScrollView *MDCBottomSheetGetPrimaryScrollView(UIViewController *viewCo
   _dimmingView.accessibilityLabel = _scrimAccessibilityLabel;
   _dimmingView.accessibilityHint = _scrimAccessibilityHint;
 
+  _dismissOnDraggingDownSheet = YES;
+
   UIScrollView *scrollView = self.trackingScrollView;
   if (scrollView == nil) {
     scrollView = MDCBottomSheetGetPrimaryScrollView(self.presentedViewController);
@@ -111,6 +116,7 @@ static UIScrollView *MDCBottomSheetGetPrimaryScrollView(UIViewController *viewCo
                                                      scrollView:scrollView];
   self.sheetView.delegate = self;
   self.sheetView.autoresizingMask = UIViewAutoresizingFlexibleHeight;
+  self.sheetView.dismissOnDraggingDownSheet = self.dismissOnDraggingDownSheet;
 
   [containerView addSubview:_dimmingView];
   [containerView addSubview:self.sheetView];
@@ -272,6 +278,21 @@ static UIScrollView *MDCBottomSheetGetPrimaryScrollView(UIViewController *viewCo
 - (void)setPreferredSheetHeight:(CGFloat)preferredSheetHeight {
   _preferredSheetHeight = preferredSheetHeight;
   [self updatePreferredSheetHeight];
+}
+
+- (void)traitCollectionDidChange:(UITraitCollection *)previousTraitCollection {
+  [super traitCollectionDidChange:previousTraitCollection];
+
+  if (self.traitCollectionDidChangeBlock) {
+    self.traitCollectionDidChangeBlock(self, previousTraitCollection);
+  }
+}
+
+- (void)setDismissOnDraggingDownSheet:(BOOL)dismissOnDraggingDownSheet {
+  _dismissOnDraggingDownSheet = dismissOnDraggingDownSheet;
+  if (self.sheetView) {
+    self.sheetView.dismissOnDraggingDownSheet = dismissOnDraggingDownSheet;
+  }
 }
 
 #pragma mark - MDCSheetContainerViewDelegate

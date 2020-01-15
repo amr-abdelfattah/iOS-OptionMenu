@@ -11,4 +11,24 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-#import "UIApplication+MDCAppExtensions.h"
+
+#import <UIKit/UIKit.h>
+
+/**
+ UIApplication extension for working with sharedApplication inside of app extensions.
+ */
+@interface UIApplication (MDCAppExtensions)
+
+/**
+ Returns sharedApplication if it is available otherwise returns nil.
+
+ This is a wrapper around sharedApplication which is safe to compile and use in app extensions.
+ */
++ (UIApplication *)mdc_safeSharedApplication;
+
+/**
+ Returns YES if called inside an application extension otherwise returns NO.
+ */
++ (BOOL)mdc_isAppExtension;
+
+@end

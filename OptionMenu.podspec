@@ -2,7 +2,7 @@
 Pod::Spec.new do |spec|
     
     spec.name         = 'OptionMenu'
-    spec.version      = '2.0.2'
+    spec.version      = '2.0.3'
     spec.summary      = 'An option menu contains more than a style and theme (Material Bottom Sheet, PopOver, Horizontal) to view in iOS.'
     spec.description  = 'It integrates with material design style and other styles to be easily configured for viewing as suits your App.'
     spec.author       = { 'Amr Elsayed' => 'amrelsayed.mohamed@gmail.com' }
@@ -17,8 +17,8 @@ Pod::Spec.new do |spec|
     spec.ios.deployment_target  = '10.0'
     spec.source_files = 'OptionMenu/Classes/**/*'
 
-    spec.dependency 'MaterialComponents/BottomSheet' , '~> 85.0'
-    spec.dependency 'Localize-Swift' , '~> 2.0'
+    spec.dependency 'MaterialComponents/BottomSheet' , '~> 101.0'
+    spec.dependency 'Localize-Swift' , '~> 3.1'
     
     spec.swift_version = '5.1'
     
