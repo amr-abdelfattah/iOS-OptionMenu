@@ -6,7 +6,6 @@
 //  Copyright © 2019 Amr Elsayed. All rights reserved.
 //
 
-import Foundation
 import UIKit
 import Localize_Swift
 
@@ -42,7 +41,6 @@ extension UIColor {
 }
 
 extension Localize {
-    
     static var isRTL : Bool {
         let RTLArray = ["ar", "fa", "ur", "he"]
         return RTLArray.contains(Localize.currentLanguage())
@@ -52,5 +50,4 @@ extension Localize {
         let RTLArray = ["ar", "fa", "ur", "he"]
         return RTLArray.contains(language)
     }
-    
 }

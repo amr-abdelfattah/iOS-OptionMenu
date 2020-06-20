@@ -6,11 +6,8 @@
 //  Copyright © 2018 SmarTech. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 public protocol OptionsMenuContentViewControllerDelegate {
-    
     func contentViewController(_ optionsMenu: OptionsMenu) -> UIViewController?
-    
 }

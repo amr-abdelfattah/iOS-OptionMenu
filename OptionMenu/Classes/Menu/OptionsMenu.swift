@@ -6,19 +6,16 @@
 //  Copyright © 2018 SmarTech. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 open class OptionsMenu : NSObject {
+    public unowned var parentViewController: UIViewController
+    public weak var dataSource: OptionsMenuDataSource?
+    public weak var delegate: OptionsMenuDelegate?
+    public var style: OptionsMenuStyle?
+    public var behaviour: OptionsMenuDisplayBehaviour?
     
-    public unowned var parentViewController : UIViewController
-    public weak var dataSource : OptionsMenuDataSource?
-    public weak var delegate : OptionsMenuDelegate?
-    public var style : OptionsMenuStyle?
-    
-    public var behaviour : OptionsMenuDisplayBehaviour?
-    
-    public init(parentViewController : UIViewController) {
+    public init(parentViewController: UIViewController) {
         self.parentViewController = parentViewController
     }
     
@@ -29,5 +26,4 @@ open class OptionsMenu : NSObject {
     open func dismiss(animated: Bool) {
         self.behaviour?.dismiss(animated: animated)
     }
-    
 }

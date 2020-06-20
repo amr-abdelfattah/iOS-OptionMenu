@@ -12,7 +12,5 @@ public protocol OptionsMenuDelegate : class {
 }
 
 public protocol ListOptionsMenuDelegate : OptionsMenuDelegate {
-    
     func optionsMenu(_ optionsMenu: OptionsMenu, didSelectOptionAtIndex index: Int)
-    
 }

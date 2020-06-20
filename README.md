@@ -9,7 +9,6 @@ Showing an option menu should not require alot of stuff to create. This Framewor
 ![Screenshot](https://github.com/amr-abdelfattah/iOS-OptionMenu/blob/v2.0.1/ScreenShots/screenshot_1.png)
 ![Screenshot](https://github.com/amr-abdelfattah/iOS-OptionMenu/blob/v2.0.1/ScreenShots/screenshot_2.png)
 
-
 ## Usage
 
 ```swift
@@ -17,7 +16,6 @@ Showing an option menu should not require alot of stuff to create. This Framewor
 // Data Source
 
 class MyOptionMenuDataSource : ListOptionsMenuDataSource {
-    
     func optionsMenuTitle(_ optionsMenu: OptionsMenu) -> String? {
         return nil
     }
@@ -27,16 +25,13 @@ class MyOptionMenuDataSource : ListOptionsMenuDataSource {
     }
     
     func optionsCount(_ optionsMenu: OptionsMenu) -> Int {
-        
         return 5
-        
     }
     
     func optionsMenu(_ optionsMenu: OptionsMenu, optionAtIndex index: Int) -> OptionsMenuItem? {
-        
         return OptionsMenuItem(identifier: String(index),
-        title: "New Option Menu At \(index)", imageName: "ic_optionmenu")
-        
+                               title: "New Option Menu At \(index)",
+                               imageName: "ic_optionmenu")    
     }
     
 }
@@ -45,52 +40,37 @@ class MyOptionMenuDataSource : ListOptionsMenuDataSource {
 // Delegate
 
 class MyOptionMenuDelegate : ListOptionsMenuDelegate {
-    
     func optionsMenu(_ optionsMenu: OptionsMenu, didSelectOptionAtIndex index: Int) {
-        
         print("Did select item at \(index)")
-        
     }
-    
 }
 
 
 // Style Customization
 
 class MyOptionMenuDataStyle : ListOptionsMenuStyle {
-
     func optionsMenu(_ optionsMenu: OptionsMenu, fontForItemAtIndex index: Int) -> UIFont? {
-       
        return UIFont.systemFont(ofSize: 14)
-       
    }
    
    func optionsMenuBackgroundColor(_ optionsMenu: OptionsMenu) -> UIColor? {
-       
        return UIColor.white
-       
    }
-   
  
    func optionsMenuTintColor(_ optionsMenu: OptionsMenu) -> UIColor? {
        return UIColor.black
    }
-
 }
 
 // Inside your View Controller
 
 func show() {
-
     let myOptionMenu = OptionsMenu(parentViewController: self)
-    
     myOptionMenu.behaviour = BottomSheetMenuDisplayBehaviour()
     myOptionMenu.style = MyOptionMenuDataStyle()
     myOptionMenu.dataSource = MyOptionMenuDataSource()
     myOptionMenu.delegate = MyOptionMenuDelegate()
-
     myOptionMenu.show(animated: true)
-    
 }
 
 ```

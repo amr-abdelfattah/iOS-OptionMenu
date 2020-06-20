@@ -6,15 +6,10 @@
 //  Copyright © 2020 Amr Elsayed. All rights reserved.
 //
 
-import Foundation
 import OptionMenu
 
 class ExampleOptionMenuDelegate: ListOptionsMenuDelegate {
-    
     func optionsMenu(_ optionsMenu: OptionsMenu, didSelectOptionAtIndex index: Int) {
-        
         print("Did select item at \(index)")
-        
     }
-    
 }

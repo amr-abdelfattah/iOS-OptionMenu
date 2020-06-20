@@ -6,12 +6,7 @@
 //  Copyright © 2018 SmarTech. All rights reserved.
 //
 
-import Foundation
-
 public protocol OptionsMenuDisplayBehaviour : class {
-    
     func display(_ optionsMenu: OptionsMenu, animated: Bool)
-    
     func dismiss(animated: Bool)
-    
 }

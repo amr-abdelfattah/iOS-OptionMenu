@@ -26,7 +26,7 @@ PODS:
     - MaterialComponents/private/Color
     - MaterialComponents/private/Math
     - MaterialComponents/ShadowLayer
-  - OptionMenu (2.0.2):
+  - OptionMenu (2.0.3):
     - Localize-Swift (~> 3.1)
     - MaterialComponents/BottomSheet (~> 101.0)
 
@@ -47,8 +47,8 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   Localize-Swift: 4bed4f0ccac8be2ec3517ee359da80ba2adb0fae
   MaterialComponents: 24aa776d7c9d680dbfaa1398f92b68a9a72538fa
-  OptionMenu: 8117f8e85022b5de04b287b9709bcfb584ba88d7
+  OptionMenu: 5801d2a64ed00741ac6035ec8762164c5a590b67
 
 PODFILE CHECKSUM: dbcd1507c4699cb19f40c4167c28974a93e71c1f
 
-COCOAPODS: 1.8.3
+COCOAPODS: 1.9.3

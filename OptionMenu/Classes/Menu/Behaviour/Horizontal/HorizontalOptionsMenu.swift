@@ -6,7 +6,6 @@
 //  Copyright © 2018 SmarTech. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 class HorizontalOptionsMenu : MenuPopOverView {
