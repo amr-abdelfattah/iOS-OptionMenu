@@ -98,7 +98,7 @@ The Swift Package Manager is a tool for automating the distribution of Swift cod
 
 ```
 dependencies: [
-.package(url: "https://github.com/amr-abdelfattah/iOS-OptionMenu.git", from: "2.0.4")
+.package(url: "https://github.com/amr-abdelfattah/iOS-OptionMenu.git", from: "2.0.5")
 ]
 ```
 
