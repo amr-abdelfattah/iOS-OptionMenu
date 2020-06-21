@@ -93,15 +93,6 @@ it, simply add the following line to your Podfile:
 pod 'OptionMenu', '~> 2.0'
 ```
 
-### Swift Package Manager
-The Swift Package Manager is a tool for automating the distribution of Swift code and is integrated into the swift compiler.
-
-```
-dependencies: [
-.package(url: "https://github.com/amr-abdelfattah/iOS-OptionMenu.git", from: "2.0.5")
-]
-```
-
 ## License
 
 OptionMenu is available under the MIT license. See the LICENSE file for more info.
