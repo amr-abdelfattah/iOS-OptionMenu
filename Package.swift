@@ -16,7 +16,7 @@ let package = Package(
     ],
     dependencies: [
     .package(url: "https://github.com/marmelroy/Localize-Swift.git", .upToNextMajor(from: "3.1.0")),
-    .package(url: "https://github.com/material-components/material-components-ios.git", .upToNextMajor(from: "101.0"))
+    .package(url: "https://github.com/material-components/material-components-ios.git", .upToNextMajor(from: "109.8"))
     ],
     targets: [
         .target(
