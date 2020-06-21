@@ -84,11 +84,22 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Installation
 
+### CocoaPods
+
 OptionMenu is available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
 pod 'OptionMenu', '~> 2.0'
+```
+
+### Swift Package Manager
+The Swift Package Manager is a tool for automating the distribution of Swift code and is integrated into the swift compiler.
+
+```
+dependencies: [
+.package(url: "https://github.com/amr-abdelfattah/iOS-OptionMenu.git", from: "2.0.4")
+]
 ```
 
 ## License
