@@ -1,6 +1,6 @@
 PODS:
   - Localize-Swift (3.1.0)
-  - MaterialComponents/BottomSheet (101.0.1):
+  - MaterialComponents/BottomSheet (101.1.1):
     - MaterialComponents/Elevation
     - MaterialComponents/private/KeyboardWatcher
     - MaterialComponents/private/Math
@@ -8,31 +8,31 @@ PODS:
     - MaterialComponents/ShadowLayer
     - MaterialComponents/ShapeLibrary
     - MaterialComponents/Shapes
-  - MaterialComponents/Elevation (101.0.1):
+  - MaterialComponents/Elevation (101.1.1):
     - MaterialComponents/private/Color
     - MaterialComponents/private/Math
-  - MaterialComponents/private/Application (101.0.1)
-  - MaterialComponents/private/Color (101.0.1)
-  - MaterialComponents/private/KeyboardWatcher (101.0.1):
+  - MaterialComponents/private/Application (101.1.1)
+  - MaterialComponents/private/Color (101.1.1)
+  - MaterialComponents/private/KeyboardWatcher (101.1.1):
     - MaterialComponents/private/Application
-  - MaterialComponents/private/Math (101.0.1)
-  - MaterialComponents/ShadowElevations (101.0.1)
-  - MaterialComponents/ShadowLayer (101.0.1):
+  - MaterialComponents/private/Math (101.1.1)
+  - MaterialComponents/ShadowElevations (101.1.1)
+  - MaterialComponents/ShadowLayer (101.1.1):
     - MaterialComponents/ShadowElevations
-  - MaterialComponents/ShapeLibrary (101.0.1):
+  - MaterialComponents/ShapeLibrary (101.1.1):
     - MaterialComponents/private/Math
     - MaterialComponents/Shapes
-  - MaterialComponents/Shapes (101.0.1):
+  - MaterialComponents/Shapes (101.1.1):
     - MaterialComponents/private/Color
     - MaterialComponents/private/Math
     - MaterialComponents/ShadowLayer
-  - OptionMenu (2.0.3):
+  - OptionMenu (2.0.7):
     - Localize-Swift (~> 3.1)
     - MaterialComponents/BottomSheet (~> 101.0)
 
 DEPENDENCIES:
-  - Localize-Swift (~> 3.1)
-  - MaterialComponents/BottomSheet (~> 101.0)
+  - Localize-Swift
+  - MaterialComponents/BottomSheet
   - OptionMenu (from `../`)
 
 SPEC REPOS:
@@ -46,9 +46,9 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Localize-Swift: 4bed4f0ccac8be2ec3517ee359da80ba2adb0fae
-  MaterialComponents: 24aa776d7c9d680dbfaa1398f92b68a9a72538fa
-  OptionMenu: 5801d2a64ed00741ac6035ec8762164c5a590b67
+  MaterialComponents: ee54e69c0956bd6e341933eee6f34dc6df08ee7a
+  OptionMenu: 278edad7125bf274248d6c1ddf2ff4d42761a98e
 
-PODFILE CHECKSUM: dbcd1507c4699cb19f40c4167c28974a93e71c1f
+PODFILE CHECKSUM: 9f4bdb2dcb53dee86576ebd1ca18edeb3c8a6f7f
 
 COCOAPODS: 1.9.3
