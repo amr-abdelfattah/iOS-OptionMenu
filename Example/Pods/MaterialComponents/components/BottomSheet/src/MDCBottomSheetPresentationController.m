@@ -16,8 +16,10 @@
 
 #import <WebKit/WebKit.h>
 
-#import "MaterialMath.h"
 #import "private/MDCSheetContainerView.h"
+#import "MDCBottomSheetPresentationControllerDelegate.h"
+#import "MDCSheetContainerViewDelegate.h"
+#import "MaterialMath.h"
 
 static UIScrollView *MDCBottomSheetGetPrimaryScrollView(UIViewController *viewController) {
   UIScrollView *scrollView = nil;
@@ -111,6 +113,12 @@ static UIScrollView *MDCBottomSheetGetPrimaryScrollView(UIViewController *viewCo
     scrollView = MDCBottomSheetGetPrimaryScrollView(self.presentedViewController);
   }
   CGRect sheetFrame = [self frameOfPresentedViewInContainerView];
+  if (self.shouldPropagateSafeAreaInsetsToPresentedViewController) {
+    if (@available(iOS 11.0, *)) {
+      self.presentedViewController.additionalSafeAreaInsets =
+          self.presentingViewController.view.safeAreaInsets;
+    }
+  }
   self.sheetView = [[MDCSheetContainerView alloc] initWithFrame:sheetFrame
                                                     contentView:self.presentedViewController.view
                                                      scrollView:scrollView];
@@ -219,9 +227,20 @@ static UIScrollView *MDCBottomSheetGetPrimaryScrollView(UIViewController *viewCo
   if ([contentView pointInside:pointInContentView withEvent:nil]) {
     return;
   }
-  [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
 
   id<MDCBottomSheetPresentationControllerDelegate> strongDelegate = self.delegate;
+  [self.presentingViewController
+      dismissViewControllerAnimated:YES
+                         completion:^{
+                           if ([strongDelegate
+                                   respondsToSelector:@selector
+                                   (bottomSheetPresentationControllerDismissalAnimationCompleted:
+                                           )]) {
+                             [strongDelegate
+                                 bottomSheetPresentationControllerDismissalAnimationCompleted:self];
+                           }
+                         }];
+
   if ([strongDelegate
           respondsToSelector:@selector(bottomSheetPresentationControllerDidDismissBottomSheet:)]) {
     [strongDelegate bottomSheetPresentationControllerDidDismissBottomSheet:self];
@@ -298,9 +317,19 @@ static UIScrollView *MDCBottomSheetGetPrimaryScrollView(UIViewController *viewCo
 #pragma mark - MDCSheetContainerViewDelegate
 
 - (void)sheetContainerViewDidHide:(nonnull __unused MDCSheetContainerView *)containerView {
-  [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
-
   id<MDCBottomSheetPresentationControllerDelegate> strongDelegate = self.delegate;
+  [self.presentingViewController
+      dismissViewControllerAnimated:YES
+                         completion:^{
+                           if ([strongDelegate
+                                   respondsToSelector:@selector
+                                   (bottomSheetPresentationControllerDismissalAnimationCompleted:
+                                           )]) {
+                             [strongDelegate
+                                 bottomSheetPresentationControllerDismissalAnimationCompleted:self];
+                           }
+                         }];
+
   if ([strongDelegate
           respondsToSelector:@selector(bottomSheetPresentationControllerDidDismissBottomSheet:)]) {
     [strongDelegate bottomSheetPresentationControllerDidDismissBottomSheet:self];

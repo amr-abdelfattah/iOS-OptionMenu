@@ -14,54 +14,13 @@
 
 #import <UIKit/UIKit.h>
 #import "MDCBottomSheetController.h"
+// TODO(b/151929968): Delete import of MDCBottomSheetPresentationControllerDelegate.h when client
+// code has been migrated to no longer import MDCBottomSheetPresentationControllerDelegate as a
+// transitive dependency.
+#import "MDCBottomSheetPresentationControllerDelegate.h"
 
 @class MDCBottomSheetPresentationController;
-
-/**
- Delegate for MDCBottomSheetPresentationController.
- */
-@protocol MDCBottomSheetPresentationControllerDelegate <UIAdaptivePresentationControllerDelegate>
-@optional
-
-/**
- Called before the bottom sheet is presented.
-
- @param bottomSheet The MDCBottomSheetPresentationController being presented.
- */
-- (void)prepareForBottomSheetPresentation:
-    (nonnull MDCBottomSheetPresentationController *)bottomSheet;
-
-/**
- Called after dimissing the bottom sheet to let clients know it is no longer onscreen. The bottom
- sheet controller calls this method only in response to user actions such as tapping the background
- or dragging the sheet offscreen. This method is not called if the bottom sheet is dismissed
- programmatically.
-
- @param bottomSheet The MDCBottomSheetPresentationController that was dismissed.
- */
-- (void)bottomSheetPresentationControllerDidDismissBottomSheet:
-    (nonnull MDCBottomSheetPresentationController *)bottomSheet;
-
-/**
- Called when the state of the bottom sheet changes.
-
- Note: See what states the sheet can transition to by looking at MDCSheetState.
-
- @param bottomSheet The MDCBottomSheetPresentationController that its state changed.
- @param sheetState The state the sheet changed to.
- */
-- (void)bottomSheetWillChangeState:(nonnull MDCBottomSheetPresentationController *)bottomSheet
-                        sheetState:(MDCSheetState)sheetState;
-
-/**
- Called when the Y offset of the sheet's changes in relation to the top of the screen.
-
- @param bottomSheet The MDCBottomSheetPresentationController that its Y offset changed.
- @param yOffset The Y offset the bottom sheet changed to.
- */
-- (void)bottomSheetDidChangeYOffset:(nonnull MDCBottomSheetPresentationController *)bottomSheet
-                            yOffset:(CGFloat)yOffset;
-@end
+@protocol MDCBottomSheetPresentationControllerDelegate;
 
 /**
  A UIPresentationController for presenting a modal view controller as a bottom sheet.
@@ -87,6 +46,15 @@
  Defaults to @c YES.
  */
 @property(nonatomic, assign) BOOL dismissOnDraggingDownSheet;
+
+/**
+ When this property is set to @c YES the MDCBottomSheetController's @c safeAreaInsets are set as @c
+ additionalSafeAreaInsets on the presented view controller. This property only works on iOS 11 and
+ above.
+
+ @note Defaults to @c NO.
+ */
+@property(nonatomic, assign) BOOL shouldPropagateSafeAreaInsetsToPresentedViewController;
 
 /**
  This is used to set a custom height on the sheet view.

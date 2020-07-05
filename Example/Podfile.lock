@@ -1,6 +1,7 @@
 PODS:
   - Localize-Swift (3.1.0)
-  - MaterialComponents/BottomSheet (101.0.1):
+  - MaterialComponents/Availability (110.1.0)
+  - MaterialComponents/BottomSheet (110.1.0):
     - MaterialComponents/Elevation
     - MaterialComponents/private/KeyboardWatcher
     - MaterialComponents/private/Math
@@ -8,31 +9,33 @@ PODS:
     - MaterialComponents/ShadowLayer
     - MaterialComponents/ShapeLibrary
     - MaterialComponents/Shapes
-  - MaterialComponents/Elevation (101.0.1):
+  - MaterialComponents/Elevation (110.1.0):
+    - MaterialComponents/Availability
     - MaterialComponents/private/Color
     - MaterialComponents/private/Math
-  - MaterialComponents/private/Application (101.0.1)
-  - MaterialComponents/private/Color (101.0.1)
-  - MaterialComponents/private/KeyboardWatcher (101.0.1):
+  - MaterialComponents/private/Application (110.1.0)
+  - MaterialComponents/private/Color (110.1.0):
+    - MaterialComponents/Availability
+  - MaterialComponents/private/KeyboardWatcher (110.1.0):
     - MaterialComponents/private/Application
-  - MaterialComponents/private/Math (101.0.1)
-  - MaterialComponents/ShadowElevations (101.0.1)
-  - MaterialComponents/ShadowLayer (101.0.1):
+  - MaterialComponents/private/Math (110.1.0)
+  - MaterialComponents/ShadowElevations (110.1.0)
+  - MaterialComponents/ShadowLayer (110.1.0):
     - MaterialComponents/ShadowElevations
-  - MaterialComponents/ShapeLibrary (101.0.1):
+  - MaterialComponents/ShapeLibrary (110.1.0):
     - MaterialComponents/private/Math
     - MaterialComponents/Shapes
-  - MaterialComponents/Shapes (101.0.1):
+  - MaterialComponents/Shapes (110.1.0):
     - MaterialComponents/private/Color
     - MaterialComponents/private/Math
     - MaterialComponents/ShadowLayer
-  - OptionMenu (2.0.3):
+  - OptionMenu (2.0.9):
     - Localize-Swift (~> 3.1)
-    - MaterialComponents/BottomSheet (~> 101.0)
+    - MaterialComponents/BottomSheet (~> 110.1)
 
 DEPENDENCIES:
   - Localize-Swift (~> 3.1)
-  - MaterialComponents/BottomSheet (~> 101.0)
+  - MaterialComponents/BottomSheet (~> 110.1)
   - OptionMenu (from `../`)
 
 SPEC REPOS:
@@ -46,9 +49,9 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Localize-Swift: 4bed4f0ccac8be2ec3517ee359da80ba2adb0fae
-  MaterialComponents: 24aa776d7c9d680dbfaa1398f92b68a9a72538fa
-  OptionMenu: 5801d2a64ed00741ac6035ec8762164c5a590b67
+  MaterialComponents: 4cb6659322cfc38bb0a7e40fba1866daaefeb12c
+  OptionMenu: d68e2356a3b440510c32103e0c666eb1f67b88d0
 
-PODFILE CHECKSUM: dbcd1507c4699cb19f40c4167c28974a93e71c1f
+PODFILE CHECKSUM: e46856c57ada3ca0af1b448b36d30cbc1b7a4c9d
 
 COCOAPODS: 1.9.3

@@ -10,9 +10,13 @@
 #endif
 #endif
 
+#import "MaterialAvailability.h"
+#import "MDCAvailability.h"
 #import "MaterialBottomSheet.h"
 #import "MDCBottomSheetController.h"
+#import "MDCBottomSheetControllerDelegate.h"
 #import "MDCBottomSheetPresentationController.h"
+#import "MDCBottomSheetPresentationControllerDelegate.h"
 #import "MDCBottomSheetTransitionController.h"
 #import "MDCSheetState.h"
 #import "UIViewController+MaterialBottomSheet.h"

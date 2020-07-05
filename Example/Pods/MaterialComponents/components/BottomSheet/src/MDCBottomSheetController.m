@@ -14,10 +14,12 @@
 
 #import "MDCBottomSheetController.h"
 
+#import "MDCBottomSheetControllerDelegate.h"
 #import "MDCBottomSheetPresentationController.h"
+#import "MDCBottomSheetPresentationControllerDelegate.h"
 #import "MDCBottomSheetTransitionController.h"
-#import "MaterialMath.h"
 #import "UIViewController+MaterialBottomSheet.h"
+#import "MaterialMath.h"
 
 @interface MDCBottomSheetController () <MDCBottomSheetPresentationControllerDelegate>
 @property(nonatomic, readonly, strong) MDCShapedView *view;
@@ -47,7 +49,11 @@
     super.transitioningDelegate = _transitionController;
     super.modalPresentationStyle = UIModalPresentationCustom;
     _shapeGenerators = [NSMutableDictionary dictionary];
-    _state = MDCSheetStatePreferred;
+    if (UIAccessibilityIsVoiceOverRunning()) {
+      _state = MDCSheetStateExtended;
+    } else {
+      _state = MDCSheetStatePreferred;
+    }
     _elevation = MDCShadowElevationModalBottomSheet;
     _mdc_overrideBaseElevation = -1;
   }
@@ -81,6 +87,7 @@
   self.mdc_bottomSheetPresentationController.dismissOnDraggingDownSheet =
       _transitionController.dismissOnDraggingDownSheet;
 
+  self.contentViewController.view.frame = self.view.bounds;
   [self.contentViewController.view layoutIfNeeded];
 }
 
