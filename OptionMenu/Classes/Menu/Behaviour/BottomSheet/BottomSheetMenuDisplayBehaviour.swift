@@ -12,9 +12,7 @@ public class BottomSheetMenuDisplayBehaviour {
     unowned var optionsMenu: OptionsMenu!
     fileprivate var bottomSheetViewController: MDCBottomSheetController!
     private var optionsMenuContentViewControllerDelegate: OptionsMenuContentViewControllerDelegate?
-    
-    private static var preferedHeight: CGFloat = 0
-    
+        
     public init(optionsMenuContentViewControllerDelegate: OptionsMenuContentViewControllerDelegate = ListOptionsMenuContentViewControllerDelegate()) {
         self.optionsMenuContentViewControllerDelegate = optionsMenuContentViewControllerDelegate
     }
