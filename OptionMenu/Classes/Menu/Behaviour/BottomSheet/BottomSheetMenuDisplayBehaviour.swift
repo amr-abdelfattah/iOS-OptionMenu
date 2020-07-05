@@ -13,16 +13,18 @@ public class BottomSheetMenuDisplayBehaviour {
     fileprivate var bottomSheetViewController: MDCBottomSheetController!
     private var optionsMenuContentViewControllerDelegate: OptionsMenuContentViewControllerDelegate?
     
+    private static var preferedHeight: CGFloat = 0
+    
     public init(optionsMenuContentViewControllerDelegate: OptionsMenuContentViewControllerDelegate = ListOptionsMenuContentViewControllerDelegate()) {
         self.optionsMenuContentViewControllerDelegate = optionsMenuContentViewControllerDelegate
     }
     
-    private func initBottomSheetViewController(optionsMenu: OptionsMenu) {
+    private func initBottomSheetViewController(optionsMenu: OptionsMenu, preferedHeight: CGFloat = 0) {
         self.optionsMenu = optionsMenu
         if let contentViewController = self.optionsMenuContentViewControllerDelegate?
             .contentViewController(optionsMenu) {
             self.bottomSheetViewController = MDCBottomSheetController(contentViewController: contentViewController)
-            setupPreferedSize(BottomSheetMenuDisplayBehaviour.initialSize)
+            setupPreferedSize(BottomSheetMenuDisplayBehaviour.initialSize(preferedHeight: preferedHeight))
         }
     }
     
@@ -36,18 +38,18 @@ extension BottomSheetMenuDisplayBehaviour {
         return UIApplication.shared.statusBarOrientation.isLandscape
     }
     
-    static var initialSize : CGSize {
+    static func initialSize(preferedHeight: CGFloat = 0) -> CGSize {
         return BottomSheetMenuDisplayBehaviour.preferredSize(
             isLandscape: isLandscape,
-            screenWidth: UIScreen.main.bounds.width)
+            screenWidth: UIScreen.main.bounds.width, preferedHeight: preferedHeight)
     }
     
-    static func preferredSize(isLandscape: Bool, screenWidth:CGFloat) -> CGSize {
+    static func preferredSize(isLandscape: Bool, screenWidth:CGFloat, preferedHeight: CGFloat = 0) -> CGSize {
         var preferredSize: CGSize
         if isLandscape {
             preferredSize = landscapeSize(forScreenWidth: screenWidth)
         } else {
-            preferredSize = portraitSize(forScreenWidth: screenWidth)
+            preferredSize = portraitSize(forScreenWidth: screenWidth, preferedHeight: preferedHeight)
         }
         return preferredSize
     }
@@ -56,8 +58,8 @@ extension BottomSheetMenuDisplayBehaviour {
         return CGSize(width: screenWidth / 2, height: CGFloat.greatestFiniteMagnitude)
     }
     
-    private static func portraitSize(forScreenWidth screenWidth: CGFloat) -> CGSize {
-        return CGSize(width: screenWidth, height: 0)
+    private static func portraitSize(forScreenWidth screenWidth: CGFloat, preferedHeight: CGFloat) -> CGSize {
+        return CGSize(width: screenWidth, height: preferedHeight)
     }
     
     private func initOrientationObserver() {
@@ -85,11 +87,16 @@ extension BottomSheetMenuDisplayBehaviour {
 
 extension BottomSheetMenuDisplayBehaviour : OptionsMenuDisplayBehaviour {
     public func display(_ optionsMenu: OptionsMenu, animated: Bool = true) {
-        initBottomSheetViewController(optionsMenu: optionsMenu)
+        self.display(optionsMenu, animated: animated)
+    }
+    
+    public func display(_ optionsMenu: OptionsMenu, animated: Bool = true, preferedHeight: CGFloat = 0) {
+        initBottomSheetViewController(optionsMenu: optionsMenu, preferedHeight: preferedHeight)
         initOrientationObserver()
-        optionsMenu.parentViewController.present(self.bottomSheetViewController,
-                                                 animated: animated,
-                                                 completion: nil)
+        optionsMenu.parentViewController
+            .present(self.bottomSheetViewController,
+                     animated: animated,
+                     completion: nil)
     }
     
     public func dismiss(animated: Bool = true) {

@@ -51,3 +51,16 @@ extension Localize {
         return RTLArray.contains(language)
     }
 }
+
+extension UIApplication {
+    var safeArea: (top: CGFloat, bottom: CGFloat) {
+        var topPadding: CGFloat = 0
+        var bottomPadding: CGFloat = 0
+        if #available(iOS 11.0, *) {
+            let window = UIApplication.shared.keyWindow
+            topPadding = window?.safeAreaInsets.top ?? 0
+            bottomPadding = window?.safeAreaInsets.bottom ?? 0
+        }
+        return (topPadding, bottomPadding)
+    }
+}

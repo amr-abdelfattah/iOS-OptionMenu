@@ -60,7 +60,7 @@ class BottomSheetMenuOptionsContainer : UITableViewController {
     }
     
     func initCurrentSize() {
-        self.currentSize = BottomSheetMenuDisplayBehaviour.initialSize
+        self.currentSize = BottomSheetMenuDisplayBehaviour.initialSize()
     }
     
     func initProtocols()  {
@@ -122,6 +122,19 @@ class BottomSheetMenuOptionsContainer : UITableViewController {
         if let sepratorColor = self.style?.optionsMenuDividerColor(self.optionsMenu) {
             self.tableView.separatorColor = sepratorColor
         }
+    }
+    
+    func addBackgroundView() {
+        let tag = 999
+        if let backgroudView = view.viewWithTag(tag) {
+            backgroudView.removeFromSuperview()
+        }
+        
+        let backgroudView = UIView(frame: CGRect(x: 0, y: tableView.contentSize.height, width: view.frame.width, height: view.frame.height - tableView.contentSize.height))
+        backgroudView.tag = tag
+        backgroudView.backgroundColor = self.style?
+            .optionsMenuBackgroundColor(optionsMenu) ?? defaultBackgroundColor
+        view.insertSubview(backgroudView, at: 0)
     }
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
@@ -191,6 +204,7 @@ extension BottomSheetMenuOptionsContainer {
     }
     
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        self.addBackgroundView()
         self.roundCorners(label: titleLabel, roundedRect: CGRect(x: 0, y: 0, width: self.currentSize.width, height: headerHeight()),corners: [.topRight, .topLeft], radius: 10)
         return self.headerView
     }
@@ -199,9 +213,19 @@ extension BottomSheetMenuOptionsContainer {
         return headerHeight()
     }
     
-    override func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-        return UIView()
-    }
+//    override func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+//        let footerView = UIView()
+//        var backgroundColor = defaultItemBackgroundColor
+//        if let color = self.style?.optionsMenu(self.optionsMenu, backgroundColorForItemAtIndex: 0) {
+//             backgroundColor = color
+//        }
+//        footerView.backgroundColor = backgroundColor
+//        return footerView
+//    }
+    
+//    override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+//        return UIApplication.shared.safeArea.bottom
+//    }
     
     private func headerHeight() -> CGFloat {
         var headerHeight : CGFloat = CGFloat(defaultHeaderHeight)
