@@ -85,7 +85,7 @@ extension BottomSheetMenuDisplayBehaviour {
 
 extension BottomSheetMenuDisplayBehaviour : OptionsMenuDisplayBehaviour {
     public func display(_ optionsMenu: OptionsMenu, animated: Bool = true) {
-        self.display(optionsMenu, animated: animated)
+        self.display(optionsMenu, animated: animated, preferedHeight: 0)
     }
     
     public func display(_ optionsMenu: OptionsMenu, animated: Bool = true, preferedHeight: CGFloat = 0) {

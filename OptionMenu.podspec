@@ -2,7 +2,7 @@
 Pod::Spec.new do |spec|
     
     spec.name         = 'OptionMenu'
-    spec.version      = '2.0.9'
+    spec.version      = '2.0.10'
     spec.summary      = 'An option menu contains more than a style and theme (Material Bottom Sheet, PopOver, Horizontal) to view in iOS.'
     spec.description  = 'It integrates with material design style and other styles to be easily configured for viewing as suits your App.'
     spec.author       = { 'Amr Elsayed' => 'amrelsayed.mohamed@gmail.com' }
