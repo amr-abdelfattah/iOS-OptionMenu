@@ -90,7 +90,7 @@ OptionMenu is available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'OptionMenu', '~> 2.0'
+pod 'OptionMenu', '~> 2.1'
 ```
 
 ## License

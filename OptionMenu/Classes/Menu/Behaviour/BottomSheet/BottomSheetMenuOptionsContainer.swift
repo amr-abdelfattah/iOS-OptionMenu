@@ -129,8 +129,8 @@ class BottomSheetMenuOptionsContainer : UITableViewController {
         if let backgroudView = view.viewWithTag(tag) {
             backgroudView.removeFromSuperview()
         }
-        
-        let backgroudView = UIView(frame: CGRect(x: 0, y: tableView.contentSize.height, width: view.frame.width, height: view.frame.height - tableView.contentSize.height))
+        tableView.layoutIfNeeded()
+        let backgroudView = UIView(frame: CGRect(x: 0, y: tableView.contentSize.height, width: view.frame.width, height: UIApplication.shared.safeArea.bottom + headerHeight()))
         backgroudView.tag = tag
         backgroudView.backgroundColor = self.style?
             .optionsMenuBackgroundColor(optionsMenu) ?? defaultBackgroundColor
@@ -200,11 +200,11 @@ extension BottomSheetMenuOptionsContainer {
             colorView.backgroundColor = self.style?.optionsMenu(self.optionsMenu, highlightColorForItemAtIndex: index) ?? defaultItemHighlightColor
             cell.selectedBackgroundView = colorView
         }
+        addBackgroundView()
         return cell
     }
     
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        self.addBackgroundView()
         self.roundCorners(label: titleLabel, roundedRect: CGRect(x: 0, y: 0, width: self.currentSize.width, height: headerHeight()),corners: [.topRight, .topLeft], radius: 10)
         return self.headerView
     }
